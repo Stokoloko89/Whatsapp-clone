@@ -115,7 +115,7 @@
           "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
           "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicSignup.jsx",
           "importSpec": {
-            "modulePath": "../pages/sign-up.jsx"
+            "modulePath": "../pages/signup.jsx"
           },
           "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicSignup.module.css",
           "scheme": "blackbox",

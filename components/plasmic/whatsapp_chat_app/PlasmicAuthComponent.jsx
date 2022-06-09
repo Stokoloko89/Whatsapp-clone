@@ -132,7 +132,7 @@ function PlasmicAuthComponent__RenderFunc(props) {
           link={
             hasVariant(variants, "isSignUpFlow", "isSignUpFlow")
               ? "/login"
-              : "/sign-up"
+              : "/signup"
           }
         >
           {hasVariant(variants, "isSignUpFlow", "isSignUpFlow")

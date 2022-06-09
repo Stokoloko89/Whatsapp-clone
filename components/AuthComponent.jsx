@@ -1,6 +1,6 @@
 import * as React from "react";
 import { PlasmicAuthComponent } from "./plasmic/whatsapp_chat_app/PlasmicAuthComponent";
-import { supabase } from "@supabase/supabase-js";
+import { supabase } from "../utils/supabaseClient";
 import { useRouter } from "next/router";
 
 function AuthComponent_(props, ref) {
