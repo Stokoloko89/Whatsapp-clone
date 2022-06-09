@@ -12,6 +12,7 @@ import * as React from "react";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -22,7 +23,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whatsapp_chat_app.module.css"; // plasmic-import: az4W6VXcp4Uq4NJ5GtxTg5/projectcss
 import sty from "./PlasmicAuthComponent.module.css"; // plasmic-import: uU40WrBZmX/css
 
-export const PlasmicAuthComponent__VariantProps = new Array();
+export const PlasmicAuthComponent__VariantProps = new Array("isSignUpFlow");
 
 export const PlasmicAuthComponent__ArgProps = new Array();
 
@@ -46,13 +47,16 @@ function PlasmicAuthComponent__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
+        projectcss.plasmic_tokens,
         sty.root
       )}
     >
       <div
-        data-plasmic-name={"text"}
-        data-plasmic-override={overrides.text}
-        className={classNames(projectcss.all, projectcss.__wab_text, sty.text)}
+        className={classNames(
+          projectcss.all,
+          projectcss.__wab_text,
+          sty.text__yhsvw
+        )}
       >
         {"Plasmic Chat App"}
       </div>
@@ -62,6 +66,7 @@ function PlasmicAuthComponent__RenderFunc(props) {
         data-plasmic-override={overrides.emailInput}
         className={classNames("__wab_instance", sty.emailInput)}
         placeholder={"Enter your email"}
+        type={"text"}
       />
 
       <TextInput
@@ -69,33 +74,91 @@ function PlasmicAuthComponent__RenderFunc(props) {
         data-plasmic-override={overrides.passwordInput}
         className={classNames("__wab_instance", sty.passwordInput)}
         placeholder={"Enter your password"}
+        type={"password"}
       />
 
       <Button
-        data-plasmic-name={"button"}
-        data-plasmic-override={overrides.button}
-        className={classNames("__wab_instance", sty.button)}
+        data-plasmic-name={"submitButton"}
+        data-plasmic-override={overrides.submitButton}
+        className={classNames("__wab_instance", sty.submitButton, {
+          [sty.submitButtonisSignUpFlow]: hasVariant(
+            variants,
+            "isSignUpFlow",
+            "isSignUpFlow"
+          )
+        })}
         color={"green"}
       >
-        {"Login"}
+        {hasVariant(variants, "isSignUpFlow", "isSignUpFlow")
+          ? "Sign up"
+          : "Login"}
       </Button>
 
       <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
         className={classNames(projectcss.all, sty.freeBox)}
-      />
+      >
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text__vKWoc,
+            {
+              [sty.textisSignUpFlow__vKWociEhBz]: hasVariant(
+                variants,
+                "isSignUpFlow",
+                "isSignUpFlow"
+              )
+            }
+          )}
+        >
+          {hasVariant(variants, "isSignUpFlow", "isSignUpFlow")
+            ? "Already have an account?"
+            : "Don't have an account? "}
+        </div>
+
+        <Button
+          data-plasmic-name={"button"}
+          data-plasmic-override={overrides.button}
+          className={classNames("__wab_instance", sty.button, {
+            [sty.buttonisSignUpFlow]: hasVariant(
+              variants,
+              "isSignUpFlow",
+              "isSignUpFlow"
+            )
+          })}
+          color={"link"}
+          link={
+            hasVariant(variants, "isSignUpFlow", "isSignUpFlow")
+              ? "/login"
+              : "/sign-up"
+          }
+        >
+          {hasVariant(variants, "isSignUpFlow", "isSignUpFlow")
+            ? "Log in here"
+            : "Sign up here"}
+        </Button>
+      </div>
     </p.Stack>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "text", "emailInput", "passwordInput", "button", "freeBox"],
-  text: ["text"],
+  root: [
+    "root",
+    "emailInput",
+    "passwordInput",
+    "submitButton",
+    "freeBox",
+    "button"
+  ],
+
   emailInput: ["emailInput"],
   passwordInput: ["passwordInput"],
-  button: ["button"],
-  freeBox: ["freeBox"]
+  submitButton: ["submitButton"],
+  freeBox: ["freeBox", "button"],
+  button: ["button"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -127,11 +190,11 @@ export const PlasmicAuthComponent = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    text: makeNodeComponent("text"),
     emailInput: makeNodeComponent("emailInput"),
     passwordInput: makeNodeComponent("passwordInput"),
-    button: makeNodeComponent("button"),
+    submitButton: makeNodeComponent("submitButton"),
     freeBox: makeNodeComponent("freeBox"),
+    button: makeNodeComponent("button"),
     // Metadata about props expected for PlasmicAuthComponent
     internalVariantProps: PlasmicAuthComponent__VariantProps,
     internalArgProps: PlasmicAuthComponent__ArgProps

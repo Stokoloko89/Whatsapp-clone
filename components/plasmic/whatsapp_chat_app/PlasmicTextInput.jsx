@@ -40,7 +40,8 @@ export const PlasmicTextInput__ArgProps = new Array(
   "name",
   "required",
   "aria-label",
-  "aria-labelledby"
+  "aria-labelledby",
+  "type"
 );
 
 export const defaultTextInput__Args = {
@@ -54,7 +55,7 @@ function PlasmicTextInput__RenderFunc(props) {
   const $ctx = ph.useDataEnv?.() || {};
   const [isRootFocusVisibleWithin, triggerRootFocusVisibleWithinProps] =
     useTrigger("useFocusVisibleWithin", {
-      isTextInput: true
+      isTextInput: false
     });
 
   const triggers = {
@@ -72,6 +73,7 @@ function PlasmicTextInput__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
+        projectcss.plasmic_tokens,
         sty.root,
         {
           [sty.root___focusVisibleWithin]: triggers.focusVisibleWithin_root,
@@ -171,7 +173,7 @@ function PlasmicTextInput__RenderFunc(props) {
         name={args.name}
         placeholder={args.placeholder}
         required={args.required}
-        type={"text"}
+        type={args.type}
         value={args.value}
       />
 

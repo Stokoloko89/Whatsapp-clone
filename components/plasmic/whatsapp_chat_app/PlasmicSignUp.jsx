@@ -15,19 +15,20 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
+import AuthComponent from "../../AuthComponent"; // plasmic-import: uU40WrBZmX/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whatsapp_chat_app.module.css"; // plasmic-import: az4W6VXcp4Uq4NJ5GtxTg5/projectcss
-import sty from "./PlasmicSignUp.module.css"; // plasmic-import: IzmpBP_M3P/css
+import sty from "./PlasmicSignup.module.css"; // plasmic-import: IzmpBP_M3P/css
 
-export const PlasmicSignUp__VariantProps = new Array();
+export const PlasmicSignup__VariantProps = new Array();
 
-export const PlasmicSignUp__ArgProps = new Array();
+export const PlasmicSignup__ArgProps = new Array();
 
-export const defaultSignUp__Args = {};
+export const defaultSignup__Args = {};
 
-function PlasmicSignUp__RenderFunc(props) {
+function PlasmicSignup__RenderFunc(props) {
   const { variants, overrides, forNode } = props;
-  const args = Object.assign({}, defaultSignUp__Args, props.args);
+  const args = Object.assign({}, defaultSignup__Args, props.args);
   const $props = args;
   const $ctx = ph.useDataEnv?.() || {};
   return (
@@ -49,16 +50,25 @@ function PlasmicSignUp__RenderFunc(props) {
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
+            projectcss.plasmic_tokens,
             sty.root
           )}
-        />
+        >
+          <AuthComponent
+            data-plasmic-name={"authComponent"}
+            data-plasmic-override={overrides.authComponent}
+            className={classNames("__wab_instance", sty.authComponent)}
+            isSignUpFlow={true}
+          />
+        </div>
       </div>
     </React.Fragment>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root", "authComponent"],
+  authComponent: ["authComponent"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -66,11 +76,11 @@ function makeNodeComponent(nodeName) {
     const { variants, args, overrides } = deriveRenderOpts(props, {
       name: nodeName,
       descendantNames: [...PlasmicDescendants[nodeName]],
-      internalArgPropNames: PlasmicSignUp__ArgProps,
-      internalVariantPropNames: PlasmicSignUp__VariantProps
+      internalArgPropNames: PlasmicSignup__ArgProps,
+      internalVariantPropNames: PlasmicSignup__VariantProps
     });
 
-    return PlasmicSignUp__RenderFunc({
+    return PlasmicSignup__RenderFunc({
       variants,
       args,
       overrides,
@@ -78,23 +88,24 @@ function makeNodeComponent(nodeName) {
     });
   };
   if (nodeName === "root") {
-    func.displayName = "PlasmicSignUp";
+    func.displayName = "PlasmicSignup";
   } else {
-    func.displayName = `PlasmicSignUp.${nodeName}`;
+    func.displayName = `PlasmicSignup.${nodeName}`;
   }
   return func;
 }
 
-export const PlasmicSignUp = Object.assign(
-  // Top-level PlasmicSignUp renders the root element
+export const PlasmicSignup = Object.assign(
+  // Top-level PlasmicSignup renders the root element
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    // Metadata about props expected for PlasmicSignUp
-    internalVariantProps: PlasmicSignUp__VariantProps,
-    internalArgProps: PlasmicSignUp__ArgProps
+    authComponent: makeNodeComponent("authComponent"),
+    // Metadata about props expected for PlasmicSignup
+    internalVariantProps: PlasmicSignup__VariantProps,
+    internalArgProps: PlasmicSignup__ArgProps
   }
 );
 
-export default PlasmicSignUp;
+export default PlasmicSignup;
 /* prettier-ignore-end */

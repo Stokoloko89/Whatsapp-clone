@@ -15,6 +15,7 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
+import AuthComponent from "../../AuthComponent"; // plasmic-import: uU40WrBZmX/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whatsapp_chat_app.module.css"; // plasmic-import: az4W6VXcp4Uq4NJ5GtxTg5/projectcss
 import sty from "./PlasmicLogin.module.css"; // plasmic-import: MyfX41bLoV/css
@@ -49,16 +50,24 @@ function PlasmicLogin__RenderFunc(props) {
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
+            projectcss.plasmic_tokens,
             sty.root
           )}
-        />
+        >
+          <AuthComponent
+            data-plasmic-name={"authComponent"}
+            data-plasmic-override={overrides.authComponent}
+            className={classNames("__wab_instance", sty.authComponent)}
+          />
+        </div>
       </div>
     </React.Fragment>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root", "authComponent"],
+  authComponent: ["authComponent"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -90,6 +99,7 @@ export const PlasmicLogin = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    authComponent: makeNodeComponent("authComponent"),
     // Metadata about props expected for PlasmicLogin
     internalVariantProps: PlasmicLogin__VariantProps,
     internalArgProps: PlasmicLogin__ArgProps

@@ -82,19 +82,6 @@
           "componentType": "page"
         },
         {
-          "id": "IzmpBP_M3P",
-          "name": "SignUp",
-          "type": "managed",
-          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
-          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicSignUp.jsx",
-          "importSpec": {
-            "modulePath": "../pages/sign-up.jsx"
-          },
-          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicSignUp.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "uU40WrBZmX",
           "name": "AuthComponent",
           "type": "managed",
@@ -120,6 +107,19 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "text-input"
+        },
+        {
+          "id": "IzmpBP_M3P",
+          "name": "Signup",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicSignup.jsx",
+          "importSpec": {
+            "modulePath": "../pages/sign-up.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicSignup.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
