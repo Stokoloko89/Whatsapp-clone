@@ -3,6 +3,8 @@
 .plasmic_tokens {
   --token-VXy8-X-S2: #f3f3f2;
   --plasmic-token-background: var(--token-VXy8-X-S2);
+  --token-pzimDq-_q: #30a46c;
+  --plasmic-token-primary: var(--token-pzimDq-_q);
 }
 
 .plasmic_default_styles {

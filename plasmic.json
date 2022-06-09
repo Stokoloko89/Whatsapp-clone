@@ -137,12 +137,37 @@
           "id": "yjvXvlq8pDI",
           "name": "SearchsvgIcon",
           "moduleFilePath": "plasmic/whatsapp_chat_app/icons/PlasmicIcon__Searchsvg.jsx"
+        },
+        {
+          "id": "ZDvu8B59X",
+          "name": "Eclipse1S200PxsvgIcon",
+          "moduleFilePath": "plasmic/whatsapp_chat_app/icons/PlasmicIcon__Eclipse1S200Pxsvg.jsx"
         }
       ],
       "images": [],
       "indirect": false,
       "globalContextsFilePath": "",
       "codeComponents": []
+    },
+    {
+      "projectId": "5dGW8Awro3qq8Hh5MveXLP",
+      "projectApiToken": "wVHvHSTRyoO1MQddr5ypmW8AfwiMMy7h0Iaj4Q2YmYLLEo2A4L6pLn8Fydm8wQkTAJV9uAD5bJPo8bmGg",
+      "projectName": "lottie-react",
+      "version": "0.0.2",
+      "cssFilePath": "plasmic/lottie_react/plasmic_lottie_react.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "BPNsJ2qis6",
+          "name": "LottieWrapper",
+          "componentImportPath": "@plasmicpkgs/lottie-react"
+        }
+      ],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {

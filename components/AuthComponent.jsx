@@ -14,6 +14,9 @@ function AuthComponent_(props, ref) {
     <PlasmicAuthComponent
       root={{ ref }}
       {...props}
+      isError={!!authError}
+      errorMessage={authError?.message}
+      isLoading={loading}
       emailInput={{
         value: email,
         onChange: (e) => setEmail(e.target.value),

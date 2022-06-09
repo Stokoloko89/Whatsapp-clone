@@ -9,6 +9,16 @@
         "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
         "id": "VXy8-X-S2"
       }
+    },
+    {
+      "name": "primary",
+      "type": "color",
+      "value": "#30A46C",
+      "category": "color",
+      "meta": {
+        "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+        "id": "pzimDq-_q"
+      }
     }
   ],
   "global": {

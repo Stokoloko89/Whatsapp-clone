@@ -22,10 +22,15 @@ import Button from "../../Button"; // plasmic-import: JejkMCPIcT0/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whatsapp_chat_app.module.css"; // plasmic-import: az4W6VXcp4Uq4NJ5GtxTg5/projectcss
 import sty from "./PlasmicAuthComponent.module.css"; // plasmic-import: uU40WrBZmX/css
+import Eclipse1S200PxsvgIcon from "./icons/PlasmicIcon__Eclipse1S200Pxsvg"; // plasmic-import: ZDvu8B59X/icon
 
-export const PlasmicAuthComponent__VariantProps = new Array("isSignUpFlow");
+export const PlasmicAuthComponent__VariantProps = new Array(
+  "isSignUpFlow",
+  "isError",
+  "isLoading"
+);
 
-export const PlasmicAuthComponent__ArgProps = new Array();
+export const PlasmicAuthComponent__ArgProps = new Array("errorMessage");
 
 export const defaultAuthComponent__Args = {};
 
@@ -48,7 +53,11 @@ function PlasmicAuthComponent__RenderFunc(props) {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
-        sty.root
+        sty.root,
+        {
+          [sty.rootisError]: hasVariant(variants, "isError", "isError"),
+          [sty.rootisLoading]: hasVariant(variants, "isLoading", "isLoading")
+        }
       )}
     >
       <div
@@ -60,6 +69,40 @@ function PlasmicAuthComponent__RenderFunc(props) {
       >
         {"Plasmic Chat App"}
       </div>
+
+      {(hasVariant(variants, "isError", "isError") ? true : true) ? (
+        <div
+          className={classNames(projectcss.all, sty.freeBox__th73K, {
+            [sty.freeBoxisError__th73KhNkpr]: hasVariant(
+              variants,
+              "isError",
+              "isError"
+            )
+          })}
+        >
+          <div
+            className={classNames(projectcss.all, sty.freeBox___2Hjc, {
+              [sty.freeBoxisError___2HjchNkpr]: hasVariant(
+                variants,
+                "isError",
+                "isError"
+              )
+            })}
+          >
+            {p.renderPlasmicSlot({
+              defaultContents: "Error text goes here",
+              value: args.errorMessage,
+              className: classNames(sty.slotTargetErrorMessage, {
+                [sty.slotTargetErrorMessageisError]: hasVariant(
+                  variants,
+                  "isError",
+                  "isError"
+                )
+              })
+            })}
+          </div>
+        </div>
+      ) : null}
 
       <TextInput
         data-plasmic-name={"emailInput"}
@@ -77,27 +120,59 @@ function PlasmicAuthComponent__RenderFunc(props) {
         type={"password"}
       />
 
-      <Button
-        data-plasmic-name={"submitButton"}
-        data-plasmic-override={overrides.submitButton}
-        className={classNames("__wab_instance", sty.submitButton, {
-          [sty.submitButtonisSignUpFlow]: hasVariant(
-            variants,
-            "isSignUpFlow",
-            "isSignUpFlow"
-          )
-        })}
-        color={"green"}
-      >
-        {hasVariant(variants, "isSignUpFlow", "isSignUpFlow")
-          ? "Sign up"
-          : "Login"}
-      </Button>
+      {(hasVariant(variants, "isLoading", "isLoading") ? true : true) ? (
+        <Eclipse1S200PxsvgIcon
+          data-plasmic-name={"svg"}
+          data-plasmic-override={overrides.svg}
+          className={classNames(projectcss.all, sty.svg, {
+            [sty.svgisLoading]: hasVariant(variants, "isLoading", "isLoading")
+          })}
+          role={"img"}
+        />
+      ) : null}
+      {(hasVariant(variants, "isLoading", "isLoading") ? false : true) ? (
+        <Button
+          data-plasmic-name={"submitButton"}
+          data-plasmic-override={overrides.submitButton}
+          className={classNames("__wab_instance", sty.submitButton, {
+            [sty.submitButtonisError]: hasVariant(
+              variants,
+              "isError",
+              "isError"
+            ),
+
+            [sty.submitButtonisLoading]: hasVariant(
+              variants,
+              "isLoading",
+              "isLoading"
+            ),
+
+            [sty.submitButtonisSignUpFlow]: hasVariant(
+              variants,
+              "isSignUpFlow",
+              "isSignUpFlow"
+            )
+          })}
+          color={"green"}
+        >
+          {hasVariant(variants, "isLoading", "isLoading")
+            ? "Login"
+            : hasVariant(variants, "isError", "isError")
+            ? "Login"
+            : hasVariant(variants, "isSignUpFlow", "isSignUpFlow")
+            ? "Sign up"
+            : "Login"}
+        </Button>
+      ) : null}
 
       <div
-        data-plasmic-name={"freeBox"}
-        data-plasmic-override={overrides.freeBox}
-        className={classNames(projectcss.all, sty.freeBox)}
+        className={classNames(projectcss.all, sty.freeBox__m1MHr, {
+          [sty.freeBoxisLoading__m1MHr5NctG]: hasVariant(
+            variants,
+            "isLoading",
+            "isLoading"
+          )
+        })}
       >
         <div
           className={classNames(
@@ -149,15 +224,15 @@ const PlasmicDescendants = {
     "root",
     "emailInput",
     "passwordInput",
+    "svg",
     "submitButton",
-    "freeBox",
     "button"
   ],
 
   emailInput: ["emailInput"],
   passwordInput: ["passwordInput"],
+  svg: ["svg"],
   submitButton: ["submitButton"],
-  freeBox: ["freeBox", "button"],
   button: ["button"]
 };
 
@@ -192,8 +267,8 @@ export const PlasmicAuthComponent = Object.assign(
     // Helper components rendering sub-elements
     emailInput: makeNodeComponent("emailInput"),
     passwordInput: makeNodeComponent("passwordInput"),
+    svg: makeNodeComponent("svg"),
     submitButton: makeNodeComponent("submitButton"),
-    freeBox: makeNodeComponent("freeBox"),
     button: makeNodeComponent("button"),
     // Metadata about props expected for PlasmicAuthComponent
     internalVariantProps: PlasmicAuthComponent__VariantProps,
