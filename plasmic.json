@@ -120,6 +120,162 @@
           "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicSignup.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "HTQEyBdZii",
+          "name": "Layout",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicLayout.jsx",
+          "importSpec": {
+            "modulePath": "Layout.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicLayout.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Y0ajM_FbEs",
+          "name": "Sidebar",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicSidebar.jsx",
+          "importSpec": {
+            "modulePath": "Sidebar.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicSidebar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "fP7sqRD_6i",
+          "name": "Chat",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicChat.jsx",
+          "importSpec": {
+            "modulePath": "Chat.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicChat.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "vXSjmOQDKr",
+          "name": "Avatar",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicAvatar.jsx",
+          "importSpec": {
+            "modulePath": "Avatar.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicAvatar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "uqUraSuaqp",
+          "name": "ChatListItem",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicChatListItem.jsx",
+          "importSpec": {
+            "modulePath": "ChatListItem.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicChatListItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "U6Sh9QLZn0",
+          "name": "ChatList",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicChatList.jsx",
+          "importSpec": {
+            "modulePath": "ChatList.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicChatList.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "bTfmYOGtaw",
+          "name": "ChatMessage",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicChatMessage.jsx",
+          "importSpec": {
+            "modulePath": "ChatMessage.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicChatMessage.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "aNdiZYoFDj",
+          "name": "ChatappBackground",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicChatappBackground.jsx",
+          "importSpec": {
+            "modulePath": "ChatappBackground.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicChatappBackground.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "fWoZSjoMIY",
+          "name": "RoomChat",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicRoomChat.jsx",
+          "importSpec": {
+            "modulePath": "../pages/room/[roomId].jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicRoomChat.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "jk7i1kUj02",
+          "name": "Profile",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicProfile.jsx",
+          "importSpec": {
+            "modulePath": "../pages/profile.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicProfile.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "t6-6051BEW",
+          "name": "UploadAvatar",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicUploadAvatar.jsx",
+          "importSpec": {
+            "modulePath": "UploadAvatar.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicUploadAvatar.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "fcBeWNpBaEq",
+          "name": "UserProfile",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicUserProfile.jsx",
+          "importSpec": {
+            "modulePath": "UserProfile.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicUserProfile.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -147,9 +303,30 @@
           "id": "gr_4w0Fso",
           "name": "Rolling1S200PxsvgIcon",
           "moduleFilePath": "plasmic/whatsapp_chat_app/icons/PlasmicIcon__Rolling1S200Pxsvg.jsx"
+        },
+        {
+          "id": "apCUQX7qw7",
+          "name": "VectorIcon",
+          "moduleFilePath": "plasmic/whatsapp_chat_app/icons/PlasmicIcon__Vector.jsx"
+        },
+        {
+          "id": "KFyYOJgDmT",
+          "name": "Vector2Icon",
+          "moduleFilePath": "plasmic/whatsapp_chat_app/icons/PlasmicIcon__Vector2.jsx"
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "id": "J6Y2qU9Li",
+          "name": "WhatsApp Inc. - jpeg",
+          "filePath": "../public/plasmic/whatsapp_chat_app/images/whatsAppIncJpeg.jpeg"
+        },
+        {
+          "id": "4nMHRA6Ze",
+          "name": "franck-Pra1zTRwqg0-unsplash.jpg",
+          "filePath": "../public/plasmic/whatsapp_chat_app/images/franckPra1ZTRwqg0Unsplashjpg.jpeg"
+        }
+      ],
       "indirect": false,
       "globalContextsFilePath": "",
       "codeComponents": []

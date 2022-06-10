@@ -1,6 +1,26 @@
 {
   "props": [
     {
+      "name": "UnnamedStyleToken",
+      "type": "color",
+      "value": "#A8A8A8B8",
+      "category": "color",
+      "meta": {
+        "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+        "id": "XTPLkWR5j"
+      }
+    },
+    {
+      "name": "UnnamedStyleToken 2",
+      "type": "color",
+      "value": "#F3F3F2",
+      "category": "color",
+      "meta": {
+        "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+        "id": "sk0pO93iI"
+      }
+    },
+    {
       "name": "background",
       "type": "color",
       "value": "#F3F3F2",

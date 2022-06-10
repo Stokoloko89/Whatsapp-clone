@@ -1,0 +1,7 @@
+.root {
+  background: url("/plasmic/whatsapp_chat_app/images/whatsAppIncJpeg.jpeg") center center / cover no-repeat;
+  width: 300px;
+  height: 100px;
+  display: block;
+  position: relative;
+}

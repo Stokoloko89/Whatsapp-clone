@@ -1,0 +1,117 @@
+.root {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 0px;
+}
+.rootisEmpty {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+  align-items: center;
+  justify-content: center;
+  background: var(--token-VXy8-X-S2);
+  display: block;
+  border-radius: 50px;
+  padding: 0px;
+}
+.rootsize__60_isEmpty {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  flex-column-gap: 0px;
+}
+.rootisEmpty_size__45 {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  min-height: 45px;
+  display: flex;
+  flex-direction: column;
+  flex-column-gap: 0px;
+}
+.img {
+  object-fit: cover;
+  max-width: 100%;
+  width: 80px;
+  height: 80px;
+  max-height: none;
+  min-width: 80px;
+  min-height: 80px;
+  flex-shrink: 0;
+  display: inline-block !important;
+  border-radius: 50px;
+}
+.img > picture > img {
+  object-fit: cover;
+}
+.img > .__wab_img-spacer > img {
+  object-fit: cover;
+}
+.imgisEmpty {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none !important;
+}
+.imgsize__60 {
+  min-width: 60px;
+  min-height: 60px;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+.imgsize__45 {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  min-height: 45px;
+  flex-shrink: 0;
+}
+.imgsize__60_isEmpty {
+  position: relative;
+  left: auto;
+  top: auto;
+}
+.imgisEmpty_size__45 {
+  position: relative;
+  left: auto;
+  top: auto;
+}
+.freeBox {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+}
+.freeBoxisEmpty {
+  position: absolute;
+  left: 28px;
+  top: 16px;
+  display: flex;
+}
+.freeBoxsize__60_isEmpty {
+  position: relative;
+  left: auto;
+  top: auto;
+}
+.freeBoxisEmpty_size__45 {
+  position: relative;
+  left: auto;
+  top: auto;
+}
+.slotTargetPrefixText {
+  font-size: 32px;
+  font-weight: 600;
+}

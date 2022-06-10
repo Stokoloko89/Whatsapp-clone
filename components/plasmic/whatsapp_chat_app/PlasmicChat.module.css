@@ -1,0 +1,162 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+  background: linear-gradient(348.4056841433553deg, #ca6405 0%, #f2d599 100%),
+    url("/plasmic/whatsapp_chat_app/images/franckPra1ZTRwqg0Unsplashjpg.jpeg") 0% 0% / cover padding-box content-box local;
+  min-width: 0;
+  min-height: 0;
+  padding: 0px;
+  border-left: 1px solid var(--token-VXy8-X-S2);
+}
+.header {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  background: #ededed;
+  min-width: 0;
+  padding: 0px;
+}
+.header > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  margin-left: calc(0px - 8px);
+  width: calc(100% + 8px);
+}
+.header > :global(.__wab_flex-container) > *,
+.header > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.header > :global(.__wab_flex-container) > picture > img,
+.header
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 8px;
+}
+.roomAvatar:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.text {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 800px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.body {
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow: auto;
+  min-width: 0;
+  min-height: 0;
+  padding: 32px 8px 8px;
+}
+.body > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  margin-top: calc(0px - 32px);
+  height: calc(100% + 32px);
+}
+.body > :global(.__wab_flex-container) > *,
+.body > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.body > :global(.__wab_flex-container) > picture > img,
+.body > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-top: 32px;
+}
+.chatMessage__c8Eeb:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.chatMessage__sX2OW:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.chatMessage__qe1GE:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.chatMessage__bdf3O:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.chatMessage__wc2Rt:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.chatMessage__pNj9:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.footer {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.footer > :global(.__wab_flex-container) {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  margin-left: calc(0px - 8px);
+  width: calc(100% + 8px);
+}
+.footer > :global(.__wab_flex-container) > *,
+.footer > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.footer > :global(.__wab_flex-container) > picture > img,
+.footer
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 8px;
+}
+.messageTextInput:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg__t177C {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg___5NZjv {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.sendIcon {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-pzimDq-_q);
+  width: 26px;
+  height: 26px;
+  display: block;
+  flex-shrink: 0;
+}
