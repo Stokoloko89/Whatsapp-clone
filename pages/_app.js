@@ -16,6 +16,8 @@ function MyApp({ Component, pageProps }) {
     })
   })
 
+  // Step 2, update the supabase auth cookie on server
+
   async function updateSupabaseCookie(event, session) {
     let apiUrl = '/api/auth/set'
     if (event === 'SIGNED_OUT') {
@@ -29,7 +31,6 @@ function MyApp({ Component, pageProps }) {
       body: JSON.stringify({ event, session })
     })
   }
-  // Step 2, update the supabase auth cookie on server
   // Step 3, add a wrapper component on ServerSideProps to check for the supabase auth cookie and do the redirection
 
   return (
