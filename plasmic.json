@@ -142,6 +142,11 @@
           "id": "ZDvu8B59X",
           "name": "Eclipse1S200PxsvgIcon",
           "moduleFilePath": "plasmic/whatsapp_chat_app/icons/PlasmicIcon__Eclipse1S200Pxsvg.jsx"
+        },
+        {
+          "id": "gr_4w0Fso",
+          "name": "Rolling1S200PxsvgIcon",
+          "moduleFilePath": "plasmic/whatsapp_chat_app/icons/PlasmicIcon__Rolling1S200Pxsvg.jsx"
         }
       ],
       "images": [],

@@ -22,7 +22,7 @@ import Button from "../../Button"; // plasmic-import: JejkMCPIcT0/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whatsapp_chat_app.module.css"; // plasmic-import: az4W6VXcp4Uq4NJ5GtxTg5/projectcss
 import sty from "./PlasmicAuthComponent.module.css"; // plasmic-import: uU40WrBZmX/css
-import Eclipse1S200PxsvgIcon from "./icons/PlasmicIcon__Eclipse1S200Pxsvg"; // plasmic-import: ZDvu8B59X/icon
+import Rolling1S200PxsvgIcon from "./icons/PlasmicIcon__Rolling1S200Pxsvg"; // plasmic-import: gr_4w0Fso/icon
 
 export const PlasmicAuthComponent__VariantProps = new Array(
   "isSignUpFlow",
@@ -121,7 +121,7 @@ function PlasmicAuthComponent__RenderFunc(props) {
       />
 
       {(hasVariant(variants, "isLoading", "isLoading") ? true : true) ? (
-        <Eclipse1S200PxsvgIcon
+        <Rolling1S200PxsvgIcon
           data-plasmic-name={"svg"}
           data-plasmic-override={overrides.svg}
           className={classNames(projectcss.all, sty.svg, {

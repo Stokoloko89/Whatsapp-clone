@@ -16,6 +16,7 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
+import Button from "../../Button"; // plasmic-import: JejkMCPIcT0/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whatsapp_chat_app.module.css"; // plasmic-import: az4W6VXcp4Uq4NJ5GtxTg5/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: vi10MrC8cmIB/css
@@ -68,6 +69,14 @@ function PlasmicHomepage__RenderFunc(props) {
           >
             {"Plasmic Chat App"}
           </h1>
+
+          <Button
+            data-plasmic-name={"logoutButton"}
+            data-plasmic-override={overrides.logoutButton}
+            className={classNames("__wab_instance", sty.logoutButton)}
+          >
+            {"Logout"}
+          </Button>
         </p.Stack>
       </div>
     </React.Fragment>
@@ -75,8 +84,9 @@ function PlasmicHomepage__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h1"],
-  h1: ["h1"]
+  root: ["root", "h1", "logoutButton"],
+  h1: ["h1"],
+  logoutButton: ["logoutButton"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -109,6 +119,7 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     h1: makeNodeComponent("h1"),
+    logoutButton: makeNodeComponent("logoutButton"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps

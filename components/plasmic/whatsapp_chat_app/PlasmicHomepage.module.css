@@ -11,7 +11,7 @@
 }
 .root > :global(.__wab_flex-container) {
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   min-width: 0;
   min-height: 0;
@@ -30,4 +30,20 @@
   height: auto;
   max-width: 800px;
   min-width: 0;
+}
+.logoutButton:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg__ksVj {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg__tj28S {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
 }

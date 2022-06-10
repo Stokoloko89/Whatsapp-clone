@@ -94,6 +94,7 @@
   align-self: center;
   width: 48px;
   height: 48px;
+  color: var(--token-pzimDq-_q);
   flex-shrink: 0;
   display: none;
 }
