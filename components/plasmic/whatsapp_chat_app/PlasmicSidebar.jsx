@@ -69,6 +69,7 @@ function PlasmicSidebar__RenderFunc(props) {
               data-plasmic-name={"userAvatar"}
               data-plasmic-override={overrides.userAvatar}
               className={classNames("__wab_instance", sty.userAvatar)}
+              isEmpty={true}
               size={"_60"}
             />
 

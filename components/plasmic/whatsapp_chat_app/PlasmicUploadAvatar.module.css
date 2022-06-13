@@ -11,3 +11,59 @@
   max-width: 100%;
   position: relative;
 }
+.avatarisLoading:global(.__wab_instance) {
+  display: none;
+}
+.freeBox__kamv2 {
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  display: none;
+  padding: 8px;
+}
+.freeBoxisError__kamv2WaVNr {
+  display: flex;
+}
+.freeBox__ikOo0 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+}
+.slotTargetErrorMessage {
+  color: #d81515;
+}
+.freeBox__d9NBj {
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  display: none;
+  padding: 8px;
+}
+.freeBoxisLoading__d9NBjKbaZ {
+  display: flex;
+}
+.svg {
+  plasmic-display-none: false;
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  align-self: center;
+  width: 48px;
+  height: 48px;
+  color: var(--token-pzimDq-_q);
+  flex-shrink: 0;
+}

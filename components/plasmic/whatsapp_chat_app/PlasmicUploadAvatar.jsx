@@ -9,8 +9,10 @@
 // Plasmic Project: az4W6VXcp4Uq4NJ5GtxTg5
 // Component: t6-6051BEW
 import * as React from "react";
+import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -19,10 +21,14 @@ import Avatar from "../../Avatar"; // plasmic-import: vXSjmOQDKr/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whatsapp_chat_app.module.css"; // plasmic-import: az4W6VXcp4Uq4NJ5GtxTg5/projectcss
 import sty from "./PlasmicUploadAvatar.module.css"; // plasmic-import: t6-6051BEW/css
+import Rolling1S200PxsvgIcon from "./icons/PlasmicIcon__Rolling1S200Pxsvg"; // plasmic-import: gr_4w0Fso/icon
 
-export const PlasmicUploadAvatar__VariantProps = new Array();
+export const PlasmicUploadAvatar__VariantProps = new Array(
+  "isError",
+  "isLoading"
+);
 
-export const PlasmicUploadAvatar__ArgProps = new Array();
+export const PlasmicUploadAvatar__ArgProps = new Array("errorMessage");
 
 export const defaultUploadAvatar__Args = {};
 
@@ -46,18 +52,86 @@ function PlasmicUploadAvatar__RenderFunc(props) {
         sty.root
       )}
     >
-      <Avatar
-        data-plasmic-name={"avatar"}
-        data-plasmic-override={overrides.avatar}
-        className={classNames("__wab_instance", sty.avatar)}
-      />
+      {(hasVariant(variants, "isLoading", "isLoading") ? true : true) ? (
+        <Avatar
+          data-plasmic-name={"avatar"}
+          data-plasmic-override={overrides.avatar}
+          className={classNames("__wab_instance", sty.avatar, {
+            [sty.avatarisLoading]: hasVariant(
+              variants,
+              "isLoading",
+              "isLoading"
+            )
+          })}
+        />
+      ) : null}
+      {(hasVariant(variants, "isError", "isError") ? true : true) ? (
+        <div
+          className={classNames(projectcss.all, sty.freeBox__kamv2, {
+            [sty.freeBoxisError__kamv2WaVNr]: hasVariant(
+              variants,
+              "isError",
+              "isError"
+            )
+          })}
+        >
+          <div
+            className={classNames(projectcss.all, sty.freeBox__ikOo0, {
+              [sty.freeBoxisError__ikOo0WaVNr]: hasVariant(
+                variants,
+                "isError",
+                "isError"
+              )
+            })}
+          >
+            {p.renderPlasmicSlot({
+              defaultContents: "Enter some text",
+              value: args.errorMessage,
+              className: classNames(sty.slotTargetErrorMessage, {
+                [sty.slotTargetErrorMessageisError]: hasVariant(
+                  variants,
+                  "isError",
+                  "isError"
+                )
+              })
+            })}
+          </div>
+        </div>
+      ) : null}
+      {(hasVariant(variants, "isLoading", "isLoading") ? true : true) ? (
+        <div
+          className={classNames(projectcss.all, sty.freeBox__d9NBj, {
+            [sty.freeBoxisLoading__d9NBjKbaZ]: hasVariant(
+              variants,
+              "isLoading",
+              "isLoading"
+            )
+          })}
+        >
+          {(hasVariant(variants, "isLoading", "isLoading") ? true : false) ? (
+            <Rolling1S200PxsvgIcon
+              data-plasmic-name={"svg"}
+              data-plasmic-override={overrides.svg}
+              className={classNames(projectcss.all, sty.svg, {
+                [sty.svgisLoading]: hasVariant(
+                  variants,
+                  "isLoading",
+                  "isLoading"
+                )
+              })}
+              role={"img"}
+            />
+          ) : null}
+        </div>
+      ) : null}
     </div>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "avatar"],
-  avatar: ["avatar"]
+  root: ["root", "avatar", "svg"],
+  avatar: ["avatar"],
+  svg: ["svg"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -90,6 +164,7 @@ export const PlasmicUploadAvatar = Object.assign(
   {
     // Helper components rendering sub-elements
     avatar: makeNodeComponent("avatar"),
+    svg: makeNodeComponent("svg"),
     // Metadata about props expected for PlasmicUploadAvatar
     internalVariantProps: PlasmicUploadAvatar__VariantProps,
     internalArgProps: PlasmicUploadAvatar__ArgProps

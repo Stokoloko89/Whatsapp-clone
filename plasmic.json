@@ -109,19 +109,6 @@
           "plumeType": "text-input"
         },
         {
-          "id": "IzmpBP_M3P",
-          "name": "Signup",
-          "type": "managed",
-          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
-          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicSignup.jsx",
-          "importSpec": {
-            "modulePath": "../pages/signup.jsx"
-          },
-          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicSignup.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "HTQEyBdZii",
           "name": "Layout",
           "type": "managed",
@@ -276,6 +263,19 @@
           "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicUserProfile.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "IzmpBP_M3P",
+          "name": "Signup",
+          "type": "managed",
+          "projectId": "az4W6VXcp4Uq4NJ5GtxTg5",
+          "renderModuleFilePath": "plasmic/whatsapp_chat_app/PlasmicSignup.jsx",
+          "importSpec": {
+            "modulePath": "../pages/signup.jsx"
+          },
+          "cssFilePath": "plasmic/whatsapp_chat_app/PlasmicSignup.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -366,6 +366,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.180",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.180/dist/plasmic.schema.json"
+  "cliVersion": "0.1.182",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.182/dist/plasmic.schema.json"
 }

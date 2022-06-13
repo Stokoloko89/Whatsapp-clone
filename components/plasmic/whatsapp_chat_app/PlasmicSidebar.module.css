@@ -82,6 +82,9 @@
   > img {
   margin-left: 8px;
 }
+.userAvatar:global(.__wab_instance) {
+  flex-shrink: 0;
+}
 .freeBox__f3Dgg {
   position: relative;
   width: 100%;
