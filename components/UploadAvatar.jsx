@@ -2,10 +2,10 @@ import * as React from "react";
 import { PlasmicUploadAvatar } from "./plasmic/whatsapp_chat_app/PlasmicUploadAvatar";
 import { supabase } from "../utils/supabaseClient";
 
-function UploadAvatar_({ onUpload, url, loading, ...props }, ref) {
+function UploadAvatar_({ url, onUpload, loading, ...props }, _ref) {
   const [uploadError, setUploadError] = React.useState("");
   const [uploading, setUploading] = React.useState(false);
-  const [avatarUrl, setAvatarUrl] = React.useState(null);
+  const [avatarUrl, setAvatarUrl] = React.useState("");
 
   React.useEffect(() => {
     setAvatarUrl(url);
@@ -69,7 +69,6 @@ function UploadAvatar_({ onUpload, url, loading, ...props }, ref) {
                 style={{ display: "none" }}
                 disabled={uploading}
                 onChange={handleUploadImage}
-                value={""}
               />
             </label>
           );

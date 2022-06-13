@@ -17,9 +17,10 @@ function UserProfile_({ ...props }, ref) {
     useGetUserProfile(user?.id);
   const updateUserProfileMutation = useUpdateUserProfile();
 
+  // the initial render with useEffect retrieved undefined profile_name values, therefore had to use nullish coalescing operator to provide default values to silence React!
   React.useEffect(() => {
-    setFirstName(userProfile?.first_name);
-    setLastName(userProfile?.last_name);
+    setFirstName(userProfile?.first_name ?? "First Name");
+    setLastName(userProfile?.last_name ?? "Last Name");
   }, [userProfile]);
 
   return (
@@ -29,13 +30,9 @@ function UserProfile_({ ...props }, ref) {
       uploadAvatar={{
         url: userProfile?.avatar_url,
         onUpload: async (url) => {
-          // update profile mutation to update the avatar_url on the backend.
-          await updateUserProfileMutation.mutateAsync({
-            avatar_url: url,
-            loading:
-              userProfileIsLoading || updateUserProfileMutation.isLoading,
-          });
+          await updateUserProfileMutation.mutateAsync({ avatar_url: url });
         },
+        loading: userProfileIsLoading || updateUserProfileMutation.isLoading,
       }}
       firstNameInput={{
         value: firstName,
