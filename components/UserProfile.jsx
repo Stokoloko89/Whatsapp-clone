@@ -42,6 +42,13 @@ function UserProfile_({ ...props }, ref) {
         value: lastName,
         onChange: (e) => setLastName(e.target.value),
       }}
+      saveProfileButton={{
+        onClick: async () =>
+          await updateUserProfileMutation.mutateAsync({
+            first_name: firstName,
+            last_name: lastName,
+          }),
+      }}
     />
   );
 }

@@ -12,6 +12,7 @@ import * as React from "react";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -20,8 +21,9 @@ import ChatListItem from "../../ChatListItem"; // plasmic-import: uqUraSuaqp/com
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whatsapp_chat_app.module.css"; // plasmic-import: az4W6VXcp4Uq4NJ5GtxTg5/projectcss
 import sty from "./PlasmicChatList.module.css"; // plasmic-import: U6Sh9QLZn0/css
+import Rolling1S200PxsvgIcon from "./icons/PlasmicIcon__Rolling1S200Pxsvg"; // plasmic-import: gr_4w0Fso/icon
 
-export const PlasmicChatList__VariantProps = new Array();
+export const PlasmicChatList__VariantProps = new Array("isLoading");
 
 export const PlasmicChatList__ArgProps = new Array();
 
@@ -49,27 +51,52 @@ function PlasmicChatList__RenderFunc(props) {
         sty.root
       )}
     >
-      <ChatListItem
-        className={classNames("__wab_instance", sty.chatListItem__ocRzb)}
-      />
-
-      <ChatListItem
-        className={classNames("__wab_instance", sty.chatListItem___3Ykdo)}
-      />
-
-      <ChatListItem
-        className={classNames("__wab_instance", sty.chatListItem__faqkz)}
-      />
-
-      <ChatListItem
-        className={classNames("__wab_instance", sty.chatListItem__cUmUj)}
-      />
+      {true ? (
+        <p.Stack
+          as={"div"}
+          data-plasmic-name={"chatListWrapper"}
+          data-plasmic-override={overrides.chatListWrapper}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.chatListWrapper)}
+        >
+          {(hasVariant(variants, "isLoading", "isLoading") ? true : true) ? (
+            <ChatListItem
+              data-plasmic-name={"chatListItem"}
+              data-plasmic-override={overrides.chatListItem}
+              className={classNames("__wab_instance", sty.chatListItem, {
+                [sty.chatListItemisLoading]: hasVariant(
+                  variants,
+                  "isLoading",
+                  "isLoading"
+                )
+              })}
+            />
+          ) : null}
+          {(hasVariant(variants, "isLoading", "isLoading") ? true : true) ? (
+            <Rolling1S200PxsvgIcon
+              data-plasmic-name={"svg"}
+              data-plasmic-override={overrides.svg}
+              className={classNames(projectcss.all, sty.svg, {
+                [sty.svgisLoading]: hasVariant(
+                  variants,
+                  "isLoading",
+                  "isLoading"
+                )
+              })}
+              role={"img"}
+            />
+          ) : null}
+        </p.Stack>
+      ) : null}
     </p.Stack>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root"]
+  root: ["root", "chatListWrapper", "chatListItem", "svg"],
+  chatListWrapper: ["chatListWrapper", "chatListItem", "svg"],
+  chatListItem: ["chatListItem"],
+  svg: ["svg"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -101,6 +128,9 @@ export const PlasmicChatList = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    chatListWrapper: makeNodeComponent("chatListWrapper"),
+    chatListItem: makeNodeComponent("chatListItem"),
+    svg: makeNodeComponent("svg"),
     // Metadata about props expected for PlasmicChatList
     internalVariantProps: PlasmicChatList__VariantProps,
     internalArgProps: PlasmicChatList__ArgProps
