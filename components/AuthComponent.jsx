@@ -50,6 +50,12 @@ function AuthComponent_(props, ref) {
             setLoading(false);
           }
         },
+        onKeyDown: (event) => {
+          if (event.keyCode === 13) {
+            console.log(newMessage);
+            setNewMessage("");
+          }
+        },
       }}
     />
   );
