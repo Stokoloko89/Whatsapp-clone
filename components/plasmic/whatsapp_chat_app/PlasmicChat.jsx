@@ -26,7 +26,7 @@ import Vector2Icon from "./icons/PlasmicIcon__Vector2"; // plasmic-import: KFyYO
 
 export const PlasmicChat__VariantProps = new Array();
 
-export const PlasmicChat__ArgProps = new Array();
+export const PlasmicChat__ArgProps = new Array("roomName");
 
 export const defaultChat__Args = {};
 
@@ -65,15 +65,15 @@ function PlasmicChat__RenderFunc(props) {
         />
 
         <div
-          data-plasmic-name={"text"}
-          data-plasmic-override={overrides.text}
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text
-          )}
+          data-plasmic-name={"freeBox"}
+          data-plasmic-override={overrides.freeBox}
+          className={classNames(projectcss.all, sty.freeBox)}
         >
-          {"Enter some text"}
+          {p.renderPlasmicSlot({
+            defaultContents: "Enter some text",
+            value: args.roomName,
+            className: classNames(sty.slotTargetRoomName)
+          })}
         </div>
       </p.Stack>
 
@@ -140,16 +140,16 @@ const PlasmicDescendants = {
     "root",
     "header",
     "roomAvatar",
-    "text",
+    "freeBox",
     "body",
     "footer",
     "messageTextInput",
     "sendIcon"
   ],
 
-  header: ["header", "roomAvatar", "text"],
+  header: ["header", "roomAvatar", "freeBox"],
   roomAvatar: ["roomAvatar"],
-  text: ["text"],
+  freeBox: ["freeBox"],
   body: ["body"],
   footer: ["footer", "messageTextInput", "sendIcon"],
   messageTextInput: ["messageTextInput"],
@@ -187,7 +187,7 @@ export const PlasmicChat = Object.assign(
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),
     roomAvatar: makeNodeComponent("roomAvatar"),
-    text: makeNodeComponent("text"),
+    freeBox: makeNodeComponent("freeBox"),
     body: makeNodeComponent("body"),
     footer: makeNodeComponent("footer"),
     messageTextInput: makeNodeComponent("messageTextInput"),

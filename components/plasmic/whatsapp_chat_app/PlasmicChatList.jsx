@@ -57,7 +57,13 @@ function PlasmicChatList__RenderFunc(props) {
           data-plasmic-name={"chatListWrapper"}
           data-plasmic-override={overrides.chatListWrapper}
           hasGap={true}
-          className={classNames(projectcss.all, sty.chatListWrapper)}
+          className={classNames(projectcss.all, sty.chatListWrapper, {
+            [sty.chatListWrapperisLoading]: hasVariant(
+              variants,
+              "isLoading",
+              "isLoading"
+            )
+          })}
         >
           {(hasVariant(variants, "isLoading", "isLoading") ? true : true) ? (
             <ChatListItem
