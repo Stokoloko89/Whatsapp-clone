@@ -17,12 +17,12 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import Avatar from "../../Avatar"; // plasmic-import: vXSjmOQDKr/component
+import LogoutIcon from "../../LogoutIcon"; // plasmic-import: YuVt1lzfc5/component
 import TextInput from "../../TextInput"; // plasmic-import: 2MaJyIaWIXg/component
 import ChatList from "../../ChatList"; // plasmic-import: U6Sh9QLZn0/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whatsapp_chat_app.module.css"; // plasmic-import: az4W6VXcp4Uq4NJ5GtxTg5/projectcss
 import sty from "./PlasmicSidebar.module.css"; // plasmic-import: Y0ajM_FbEs/css
-import VectorIcon from "./icons/PlasmicIcon__Vector"; // plasmic-import: apCUQX7qw7/icon
 
 export const PlasmicSidebar__VariantProps = new Array();
 
@@ -82,11 +82,10 @@ function PlasmicSidebar__RenderFunc(props) {
           </p.Stack>
         ) : null}
 
-        <VectorIcon
-          data-plasmic-name={"logouticon"}
-          data-plasmic-override={overrides.logouticon}
-          className={classNames(projectcss.all, sty.logouticon)}
-          role={"img"}
+        <LogoutIcon
+          data-plasmic-name={"logoutIcon"}
+          data-plasmic-override={overrides.logoutIcon}
+          className={classNames("__wab_instance", sty.logoutIcon)}
         />
       </p.Stack>
 
@@ -139,7 +138,7 @@ const PlasmicDescendants = {
     "root",
     "headerProfile",
     "userAvatar",
-    "logouticon",
+    "logoutIcon",
     "searchInputWrapper",
     "searchRoomTextInput",
     "addNewRoomWrapper",
@@ -147,9 +146,9 @@ const PlasmicDescendants = {
     "chatList"
   ],
 
-  headerProfile: ["headerProfile", "userAvatar", "logouticon"],
+  headerProfile: ["headerProfile", "userAvatar", "logoutIcon"],
   userAvatar: ["userAvatar"],
-  logouticon: ["logouticon"],
+  logoutIcon: ["logoutIcon"],
   searchInputWrapper: ["searchInputWrapper", "searchRoomTextInput"],
   searchRoomTextInput: ["searchRoomTextInput"],
   addNewRoomWrapper: ["addNewRoomWrapper", "text"],
@@ -188,7 +187,7 @@ export const PlasmicSidebar = Object.assign(
     // Helper components rendering sub-elements
     headerProfile: makeNodeComponent("headerProfile"),
     userAvatar: makeNodeComponent("userAvatar"),
-    logouticon: makeNodeComponent("logouticon"),
+    logoutIcon: makeNodeComponent("logoutIcon"),
     searchInputWrapper: makeNodeComponent("searchInputWrapper"),
     searchRoomTextInput: makeNodeComponent("searchRoomTextInput"),
     addNewRoomWrapper: makeNodeComponent("addNewRoomWrapper"),

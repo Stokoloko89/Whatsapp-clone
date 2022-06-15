@@ -1,17 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&family=Work+Sans%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
 
 .plasmic_tokens {
   --token-VXy8-X-S2: #f3f3f2;
   --plasmic-token-background: var(--token-VXy8-X-S2);
-  --token-pzimDq-_q: #30a46c;
+  --token-pzimDq-_q: #c9ffdecf;
   --plasmic-token-primary: var(--token-pzimDq-_q);
   --token-XTPLkWR5j: #a8a8a8b8;
   --plasmic-token-unnamed-style-token: var(--token-XTPLkWR5j);
   --token-sk0pO93iI: var(--token-VXy8-X-S2);
   --plasmic-token-unnamed-style-token-2: var(--token-sk0pO93iI);
+  --token-9bm6nLMuC: #00000040;
+  --plasmic-token-nav-shadow: var(--token-9bm6nLMuC);
+  --token-L8JWqfbYQ: #00000040;
+  --plasmic-token-nav-shadow-2: var(--token-L8JWqfbYQ);
+  --token-rDZvm0oK2: #00000040;
+  --plasmic-token-avatar-shadow: var(--token-rDZvm0oK2);
+  --token-9hHG1BbZq: 16px;
+  --plasmic-token-unnamed-style-token-3: var(--token-9hHG1BbZq);
+  --token-sOBzgidG2: #2588c5cf;
+  --plasmic-token-is-loading: var(--token-sOBzgidG2);
 }
 
-.plasmic_default_styles {
+.plasmic_default_styles,
+.plasmic_default_styles:where(.global_unnamedGlobalGroupOfVariants_unnamedVariant) {
   --mixin-R5kAc_BT2GpZ_font-family: "Inter";
   --mixin-R5kAc_BT2GpZ_font-size: 16px;
   --mixin-R5kAc_BT2GpZ_font-weight: 400;

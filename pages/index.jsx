@@ -6,16 +6,7 @@ import { supabase } from "../utils/supabaseClient";
 
 function Homepage() {
   const router = useRouter();
-  return (
-    <PlasmicHomepage
-      logoutButton={{
-        onClick: async () => {
-          await supabase.auth.signOut();
-          router.replace("/");
-        },
-      }}
-    />
-  );
+  return <PlasmicHomepage />;
 }
 export const getServerSideProps = enforceAuth();
 export default Homepage;

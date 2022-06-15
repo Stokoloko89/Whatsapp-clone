@@ -35,6 +35,12 @@ function Sidebar_(props, ref) {
           router.push("/profile");
         },
       }}
+      logoutIcon={{
+        onClick: async () => {
+          await supabase.auth.signOut();
+          router.replace("/");
+        },
+      }}
       addNewRoomWrapper={{
         onClick: async () => {
           const roomName = prompt("Please enter a room name");

@@ -16,6 +16,7 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import Layout from "../../Layout"; // plasmic-import: HTQEyBdZii/component
+import Chat from "../../Chat"; // plasmic-import: fP7sqRD_6i/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_whatsapp_chat_app.module.css"; // plasmic-import: az4W6VXcp4Uq4NJ5GtxTg5/projectcss
 import sty from "./PlasmicRoomChat.module.css"; // plasmic-import: fWoZSjoMIY/css
@@ -63,6 +64,14 @@ function PlasmicRoomChat__RenderFunc(props) {
               data-plasmic-name={"layout"}
               data-plasmic-override={overrides.layout}
               className={classNames("__wab_instance", sty.layout)}
+              mainContent={
+                <Chat
+                  data-plasmic-name={"chat"}
+                  data-plasmic-override={overrides.chat}
+                  className={classNames("__wab_instance", sty.chat)}
+                  roomName={"Enter some text"}
+                />
+              }
             />
           </div>
         </div>
@@ -72,9 +81,10 @@ function PlasmicRoomChat__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "layout"],
-  freeBox: ["freeBox", "layout"],
-  layout: ["layout"]
+  root: ["root", "freeBox", "layout", "chat"],
+  freeBox: ["freeBox", "layout", "chat"],
+  layout: ["layout", "chat"],
+  chat: ["chat"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -108,6 +118,7 @@ export const PlasmicRoomChat = Object.assign(
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
     layout: makeNodeComponent("layout"),
+    chat: makeNodeComponent("chat"),
     // Metadata about props expected for PlasmicRoomChat
     internalVariantProps: PlasmicRoomChat__VariantProps,
     internalArgProps: PlasmicRoomChat__ArgProps

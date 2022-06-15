@@ -19,13 +19,13 @@
 .root > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
   margin-top: 16px;
 }
-.text__yhsvw {
+.crossBlckwllStokolokoChatApp {
   position: relative;
   width: auto;
   height: auto;
   max-width: 800px;
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
 }
 .freeBox__th73K {
@@ -94,7 +94,7 @@
   align-self: center;
   width: 48px;
   height: 48px;
-  color: var(--token-pzimDq-_q);
+  color: var(--token-sOBzgidG2);
   flex-shrink: 0;
   display: none;
 }
@@ -129,7 +129,7 @@
   align-self: center;
   padding: 8px;
 }
-.text__vKWoc {
+.text {
   position: relative;
   width: 100%;
   height: auto;

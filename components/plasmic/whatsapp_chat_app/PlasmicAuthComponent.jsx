@@ -61,13 +61,15 @@ function PlasmicAuthComponent__RenderFunc(props) {
       )}
     >
       <div
+        data-plasmic-name={"crossBlckwllStokolokoChatApp"}
+        data-plasmic-override={overrides.crossBlckwllStokolokoChatApp}
         className={classNames(
           projectcss.all,
           projectcss.__wab_text,
-          sty.text__yhsvw
+          sty.crossBlckwllStokolokoChatApp
         )}
       >
-        {"Plasmic Chat App"}
+        {"Kross & Blckwll Stokoloko ChatApp"}
       </div>
 
       {(hasVariant(variants, "isError", "isError") ? true : true) ? (
@@ -175,12 +177,14 @@ function PlasmicAuthComponent__RenderFunc(props) {
         })}
       >
         <div
+          data-plasmic-name={"text"}
+          data-plasmic-override={overrides.text}
           className={classNames(
             projectcss.all,
             projectcss.__wab_text,
-            sty.text__vKWoc,
+            sty.text,
             {
-              [sty.textisSignUpFlow__vKWociEhBz]: hasVariant(
+              [sty.textisSignUpFlow]: hasVariant(
                 variants,
                 "isSignUpFlow",
                 "isSignUpFlow"
@@ -222,17 +226,21 @@ function PlasmicAuthComponent__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "crossBlckwllStokolokoChatApp",
     "emailInput",
     "passwordInput",
     "svg",
     "submitButton",
+    "text",
     "button"
   ],
 
+  crossBlckwllStokolokoChatApp: ["crossBlckwllStokolokoChatApp"],
   emailInput: ["emailInput"],
   passwordInput: ["passwordInput"],
   svg: ["svg"],
   submitButton: ["submitButton"],
+  text: ["text"],
   button: ["button"]
 };
 
@@ -265,10 +273,15 @@ export const PlasmicAuthComponent = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    crossBlckwllStokolokoChatApp: makeNodeComponent(
+      "crossBlckwllStokolokoChatApp"
+    ),
+
     emailInput: makeNodeComponent("emailInput"),
     passwordInput: makeNodeComponent("passwordInput"),
     svg: makeNodeComponent("svg"),
     submitButton: makeNodeComponent("submitButton"),
+    text: makeNodeComponent("text"),
     button: makeNodeComponent("button"),
     // Metadata about props expected for PlasmicAuthComponent
     internalVariantProps: PlasmicAuthComponent__VariantProps,

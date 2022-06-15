@@ -27,6 +27,6 @@
   max-width: 100%;
   position: relative;
 }
-.chat__iUaZ9:global(.__wab_instance) {
+.chat:global(.__wab_instance) {
   position: relative;
 }

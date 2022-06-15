@@ -86,19 +86,71 @@ function PlasmicChat__RenderFunc(props) {
       >
         <ChatMessage
           className={classNames("__wab_instance", sty.chatMessage__c8Eeb)}
+          content={
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__oAUV
+              )}
+            >
+              {
+                "asdasdsaLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+              }
+            </div>
+          }
         />
 
         <ChatMessage
           className={classNames("__wab_instance", sty.chatMessage__sX2OW)}
+          content={
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__eUfL
+              )}
+            >
+              {
+                "asdasdsaLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+              }
+            </div>
+          }
           isSent={true}
         />
 
         <ChatMessage
           className={classNames("__wab_instance", sty.chatMessage__qe1GE)}
+          content={
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__pEvlE
+              )}
+            >
+              {
+                "asdasdsaLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+              }
+            </div>
+          }
         />
 
         <ChatMessage
           className={classNames("__wab_instance", sty.chatMessage__bdf3O)}
+          content={
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__sN5Yi
+              )}
+            >
+              {
+                "asdasdsaLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+              }
+            </div>
+          }
         />
 
         <ChatMessage

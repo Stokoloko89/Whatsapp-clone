@@ -26,6 +26,40 @@ function AuthComponent_(props, ref) {
         onChange: (e) => setPassword(e.target.value),
       }}
       submitButton={{
+        onKeyDown: (e) => {
+          if (e.keyCode === 13) {
+            async () => {
+              setLoading(true);
+              setAuthError(null);
+              try {
+                let authFunction = null;
+                if (props.isSignUpFlow) {
+                  authFunction = await supabase.auth.signUp({
+                    email,
+                    password,
+                  });
+                } else {
+                  authFunction = await supabase.auth.signIn({
+                    email,
+                    password,
+                  });
+                }
+
+                const { error } = authFunction;
+                if (error) {
+                  setAuthError(error);
+                  return;
+                }
+
+                router.replace("/profile");
+              } catch (err) {
+                setAuthError(err);
+              } finally {
+                setLoading(false);
+              }
+            };
+          }
+        },
         onClick: async () => {
           setLoading(true);
           setAuthError(null);
@@ -43,17 +77,11 @@ function AuthComponent_(props, ref) {
               return;
             }
 
-            router.replace("/");
+            router.replace("/profile");
           } catch (err) {
             setAuthError(err);
           } finally {
             setLoading(false);
-          }
-        },
-        onKeyDown: (event) => {
-          if (event.keyCode === 13) {
-            console.log(newMessage);
-            setNewMessage("");
           }
         },
       }}
